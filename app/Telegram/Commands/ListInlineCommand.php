@@ -17,24 +17,24 @@ class ListInlineCommand extends Command
      */
     public function handle($arguments)
     {
-        /** @var Opif $pifs */
-        $pifs = Opif::orderBy('id', 'asc')->get();
+        // /** @var Opif $pifs */
+        // $pifs = Opif::orderBy('id', 'asc')->get();
 
-        $keyboard = Keyboard::make()->inline();
-        foreach ($pifs as $pif) {
-            $command = app()->make(CourseCallbackCommand::class, [$this->getTelegram()]);
-            $command->setPifId($pif->id);
-            $button = Keyboard::inlineButton([
-                'text' => $pif->fullName,
-                'callback_data' => $command->getCallbackData(),
-            ]);
-            $keyboard->row($button);
-        }
+        // $keyboard = Keyboard::make()->inline();
+        // foreach ($pifs as $pif) {
+        //     $command = app()->make(CourseCallbackCommand::class, [$this->getTelegram()]);
+        //     $command->setPifId($pif->id);
+        //     $button = Keyboard::inlineButton([
+        //         'text' => $pif->fullName,
+        //         'callback_data' => $command->getCallbackData(),
+        //     ]);
+        //     $keyboard->row($button);
+        // }
 
 
-        $this->replyWithMessage([
-            'text' => 'Выберите ПИФ:',
-            'reply_markup' => $keyboard,
-        ]);
+        // $this->replyWithMessage([
+        //     'text' => 'Выберите ПИФ:',
+        //     'reply_markup' => $keyboard,
+        // ]);
     }
 }

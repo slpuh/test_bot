@@ -18,28 +18,28 @@ class MyCommand extends Command
      */
     public function handle($arguments)
     {
-        $keyboard = Keyboard::make()->inline();
+        // $keyboard = Keyboard::make()->inline();
 
-        /** @var MyInfoCallbackCommand $command */
-        $command = app(MyInfoCallbackCommand::class);
-        $button = Keyboard::inlineButton([
-            'text' => 'Информация',
-            'callback_data' => $command->getCallbackData(),
-        ]);
-        $keyboard->row($button);
+        // /** @var MyInfoCallbackCommand $command */
+        // $command = app(MyInfoCallbackCommand::class);
+        // $button = Keyboard::inlineButton([
+        //     'text' => 'Информация',
+        //     'callback_data' => $command->getCallbackData(),
+        // ]);
+        // $keyboard->row($button);
 
-        /** @var SetMyCallbackCommand $command */
-        $command = app(SetMyCallbackCommand::class);
-        $command->setInputPif(0);
-        $button = Keyboard::inlineButton([
-            'text' => 'Установить',
-            'callback_data' => $command->getCallbackData(),
-        ]);
-        $keyboard->row($button);
+        // /** @var SetMyCallbackCommand $command */
+        // $command = app(SetMyCallbackCommand::class);
+        // $command->setInputPif(0);
+        // $button = Keyboard::inlineButton([
+        //     'text' => 'Установить',
+        //     'callback_data' => $command->getCallbackData(),
+        // ]);
+        // $keyboard->row($button);
 
-        $this->replyWithMessage([
-            'text' => 'Ваши ПИФы:',
-            'reply_markup' => $keyboard,
-        ]);
+        // $this->replyWithMessage([
+        //     'text' => 'Ваши ПИФы:',
+        //     'reply_markup' => $keyboard,
+        // ]);
     }
 }

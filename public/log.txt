@@ -168,7 +168,7 @@ App\Telegram\ReplyAgents\MenuReplyAgent Object
                                             [cookies] => 
                                             [headers] => Array
                                                 (
-                                                    [User-Agent] => GuzzleHttp/6.3.3 curl/7.58.0 PHP/7.3.4-1+ubuntu18.04.1+deb.sury.org+3
+                                                    [User-Agent] => GuzzleHttp/6.3.3 curl/7.58.0 PHP/7.2.15-0ubuntu0.18.04.2
                                                 )
 
                                         )
@@ -300,12 +300,12 @@ App\Telegram\ReplyAgents\MenuReplyAgent Object
         (
             [items:protected] => Array
                 (
-                    [update_id] => 689853192
+                    [update_id] => 689853261
                     [message] => Telegram\Bot\Objects\Message Object
                         (
                             [items:protected] => Array
                                 (
-                                    [message_id] => 790
+                                    [message_id] => 957
                                     [from] => Telegram\Bot\Objects\User Object
                                         (
                                             [items:protected] => Array
@@ -331,8 +331,8 @@ App\Telegram\ReplyAgents\MenuReplyAgent Object
 
                                         )
 
-                                    [date] => 1555269912
-                                    [text] => 3
+                                    [date] => 1555310977
+                                    [text] => BTC
                                 )
 
                         )

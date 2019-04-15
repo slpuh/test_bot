@@ -21,14 +21,14 @@ class MyInfoCallbackCommand extends CallbackCommand
 
     public function handle()
     {
-        $userId = $this->getUpdate()->getCallbackQuery()->getFrom()->getId();
+        // $userId = $this->getUpdate()->getCallbackQuery()->getFrom()->getId();
 
-        /** @var OpifLogic $logic */
-        $logic = app(OpifLogic::class);
-        $message = $logic->getUserOpifSummary($userId);
+        // /** @var OpifLogic $logic */
+        // $logic = app(OpifLogic::class);
+        // $message = $logic->getUserOpifSummary($userId);
 
-        $this->answerCallbackQuery();
+        // $this->answerCallbackQuery();
 
-        $this->editMessageText(['text' => $message]);
+        // $this->editMessageText(['text' => $message]);
     }
 }
