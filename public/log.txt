@@ -1,0 +1,344 @@
+App\Telegram\ReplyAgents\MenuReplyAgent Object
+(
+    [name:protected] => menu
+    [telegram:protected] => Telegram\Bot\Api Object
+        (
+            [client:protected] => Telegram\Bot\TelegramClient Object
+                (
+                    [httpClientHandler:protected] => Telegram\Bot\HttpClients\GuzzleHttpClient Object
+                        (
+                            [client:protected] => GuzzleHttp\Client Object
+                                (
+                                    [config:GuzzleHttp\Client:private] => Array
+                                        (
+                                            [handler] => GuzzleHttp\HandlerStack Object
+                                                (
+                                                    [handler:GuzzleHttp\HandlerStack:private] => Closure Object
+                                                        (
+                                                            [static] => Array
+                                                                (
+                                                                    [default] => Closure Object
+                                                                        (
+                                                                            [static] => Array
+                                                                                (
+                                                                                    [default] => GuzzleHttp\Handler\CurlMultiHandler Object
+                                                                                        (
+                                                                                            [factory:GuzzleHttp\Handler\CurlMultiHandler:private] => GuzzleHttp\Handler\CurlFactory Object
+                                                                                                (
+                                                                                                    [handles:GuzzleHttp\Handler\CurlFactory:private] => Array
+                                                                                                        (
+                                                                                                        )
+
+                                                                                                    [maxHandles:GuzzleHttp\Handler\CurlFactory:private] => 50
+                                                                                                )
+
+                                                                                            [selectTimeout:GuzzleHttp\Handler\CurlMultiHandler:private] => 1
+                                                                                            [active:GuzzleHttp\Handler\CurlMultiHandler:private] => 
+                                                                                            [handles:GuzzleHttp\Handler\CurlMultiHandler:private] => Array
+                                                                                                (
+                                                                                                )
+
+                                                                                            [delays:GuzzleHttp\Handler\CurlMultiHandler:private] => Array
+                                                                                                (
+                                                                                                )
+
+                                                                                        )
+
+                                                                                    [sync] => GuzzleHttp\Handler\CurlHandler Object
+                                                                                        (
+                                                                                            [factory:GuzzleHttp\Handler\CurlHandler:private] => GuzzleHttp\Handler\CurlFactory Object
+                                                                                                (
+                                                                                                    [handles:GuzzleHttp\Handler\CurlFactory:private] => Array
+                                                                                                        (
+                                                                                                        )
+
+                                                                                                    [maxHandles:GuzzleHttp\Handler\CurlFactory:private] => 3
+                                                                                                )
+
+                                                                                        )
+
+                                                                                )
+
+                                                                            [parameter] => Array
+                                                                                (
+                                                                                    [$request] => <required>
+                                                                                    [$options] => <required>
+                                                                                )
+
+                                                                        )
+
+                                                                    [streaming] => GuzzleHttp\Handler\StreamHandler Object
+                                                                        (
+                                                                            [lastHeaders:GuzzleHttp\Handler\StreamHandler:private] => Array
+                                                                                (
+                                                                                )
+
+                                                                        )
+
+                                                                )
+
+                                                            [parameter] => Array
+                                                                (
+                                                                    [$request] => <required>
+                                                                    [$options] => <required>
+                                                                )
+
+                                                        )
+
+                                                    [stack:GuzzleHttp\HandlerStack:private] => Array
+                                                        (
+                                                            [0] => Array
+                                                                (
+                                                                    [0] => Closure Object
+                                                                        (
+                                                                            [parameter] => Array
+                                                                                (
+                                                                                    [$handler] => <required>
+                                                                                )
+
+                                                                        )
+
+                                                                    [1] => http_errors
+                                                                )
+
+                                                            [1] => Array
+                                                                (
+                                                                    [0] => Closure Object
+                                                                        (
+                                                                            [parameter] => Array
+                                                                                (
+                                                                                    [$handler] => <required>
+                                                                                )
+
+                                                                        )
+
+                                                                    [1] => allow_redirects
+                                                                )
+
+                                                            [2] => Array
+                                                                (
+                                                                    [0] => Closure Object
+                                                                        (
+                                                                            [parameter] => Array
+                                                                                (
+                                                                                    [$handler] => <required>
+                                                                                )
+
+                                                                        )
+
+                                                                    [1] => cookies
+                                                                )
+
+                                                            [3] => Array
+                                                                (
+                                                                    [0] => Closure Object
+                                                                        (
+                                                                            [parameter] => Array
+                                                                                (
+                                                                                    [$handler] => <required>
+                                                                                )
+
+                                                                        )
+
+                                                                    [1] => prepare_body
+                                                                )
+
+                                                        )
+
+                                                    [cached:GuzzleHttp\HandlerStack:private] => 
+                                                )
+
+                                            [allow_redirects] => Array
+                                                (
+                                                    [max] => 5
+                                                    [protocols] => Array
+                                                        (
+                                                            [0] => http
+                                                            [1] => https
+                                                        )
+
+                                                    [strict] => 
+                                                    [referer] => 
+                                                    [track_redirects] => 
+                                                )
+
+                                            [http_errors] => 1
+                                            [decode_content] => 1
+                                            [verify] => 1
+                                            [cookies] => 
+                                            [headers] => Array
+                                                (
+                                                    [User-Agent] => GuzzleHttp/6.3.3 curl/7.58.0 PHP/7.3.4-1+ubuntu18.04.1+deb.sury.org+3
+                                                )
+
+                                        )
+
+                                )
+
+                            [timeOut:protected] => 30
+                            [connectTimeOut:protected] => 10
+                        )
+
+                )
+
+            [accessToken:protected] => 803222815:AAECywynRhyfRrKoO03Racx5QW0pICQ6D-Y
+            [lastResponse:protected] => 
+            [isAsyncRequest:protected] => 
+            [commandBus:protected] => Telegram\Bot\Commands\CommandBus Object
+                (
+                    [commands:protected] => Array
+                        (
+                            [help] => Telegram\Bot\Commands\HelpCommand Object
+                                (
+                                    [name:protected] => help
+                                    [aliases:protected] => Array
+                                        (
+                                            [0] => listcommands
+                                        )
+
+                                    [description:protected] => Help command, Get a list of commands
+                                    [arguments:protected] => 
+                                    [telegram:protected] => 
+                                    [update:protected] => 
+                                )
+
+                            [start] => App\Telegram\Commands\StartCommand Object
+                                (
+                                    [name:protected] => start
+                                    [aliases:protected] => Array
+                                        (
+                                        )
+
+                                    [description:protected] => 
+                                    [arguments:protected] => 
+                                    [telegram:protected] => 
+                                    [update:protected] => 
+                                )
+
+                            [list] => App\Telegram\Commands\ListInlineCommand Object
+                                (
+                                    [name:protected] => list
+                                    [description:protected] => Список доступных ПИФов
+                                    [aliases:protected] => Array
+                                        (
+                                        )
+
+                                    [arguments:protected] => 
+                                    [telegram:protected] => 
+                                    [update:protected] => 
+                                )
+
+                            [my] => App\Telegram\Commands\MyCommand Object
+                                (
+                                    [name:protected] => my
+                                    [description:protected] => Отображает информацию по всем Вашим ПИФам
+                                    [aliases:protected] => Array
+                                        (
+                                        )
+
+                                    [arguments:protected] => 
+                                    [telegram:protected] => 
+                                    [update:protected] => 
+                                )
+
+                            [about] => App\Telegram\Commands\AboutCommand Object
+                                (
+                                    [name:protected] => about
+                                    [description:protected] => Информация о боте
+                                    [aliases:protected] => Array
+                                        (
+                                        )
+
+                                    [arguments:protected] => 
+                                    [telegram:protected] => 
+                                    [update:protected] => 
+                                )
+
+                            [test] => App\Telegram\Commands\TestCommand Object
+                                (
+                                    [name:protected] => test
+                                    [description:protected] => Test command, Get a list of commands
+                                    [aliases:protected] => Array
+                                        (
+                                        )
+
+                                    [arguments:protected] => 
+                                    [telegram:protected] => 
+                                    [update:protected] => 
+                                )
+
+                        )
+
+                    [commandAliases:protected] => Array
+                        (
+                            [listcommands] => Telegram\Bot\Commands\HelpCommand Object
+                                (
+                                    [name:protected] => help
+                                    [aliases:protected] => Array
+                                        (
+                                            [0] => listcommands
+                                        )
+
+                                    [description:protected] => Help command, Get a list of commands
+                                    [arguments:protected] => 
+                                    [telegram:protected] => 
+                                    [update:protected] => 
+                                )
+
+                        )
+
+                    [telegram:protected] => Telegram\Bot\Api Object
+ *RECURSION*
+                )
+
+            [timeOut:protected] => 60
+            [connectTimeOut:protected] => 10
+            [eventEmitter:Telegram\Bot\Api:private] => 
+        )
+
+    [update:protected] => Telegram\Bot\Objects\Update Object
+        (
+            [items:protected] => Array
+                (
+                    [update_id] => 689853192
+                    [message] => Telegram\Bot\Objects\Message Object
+                        (
+                            [items:protected] => Array
+                                (
+                                    [message_id] => 790
+                                    [from] => Telegram\Bot\Objects\User Object
+                                        (
+                                            [items:protected] => Array
+                                                (
+                                                    [id] => 140419085
+                                                    [is_bot] => 
+                                                    [first_name] => pooh95
+                                                    [username] => pooh95
+                                                    [language_code] => ru
+                                                )
+
+                                        )
+
+                                    [chat] => Telegram\Bot\Objects\Chat Object
+                                        (
+                                            [items:protected] => Array
+                                                (
+                                                    [id] => 140419085
+                                                    [first_name] => pooh95
+                                                    [username] => pooh95
+                                                    [type] => private
+                                                )
+
+                                        )
+
+                                    [date] => 1555269912
+                                    [text] => 3
+                                )
+
+                        )
+
+                )
+
+        )
+
+)
