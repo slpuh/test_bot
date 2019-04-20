@@ -7,17 +7,18 @@ class MenuReplyAgent extends AbstractReplyAgent
 
     public function handle()
     {
-        $message = $this->getUpdate()->getMessage()->getText();
-
-        file_put_contents('log.txt', print_r($this, true));
-        if (strpos($message, 'BTC') === 0) {            
-            $this->getTelegram()->triggerCommand('test', $this->getUpdate());
-            return false;
-        } elseif (strpos($message, 'ETC') === 0) {
-            $this->getTelegram()->triggerCommand('my', $this->getUpdate());
-            return false;
-        }
-
+        $message = $this->getUpdate()->getMessage()->getText(); 
+        
+        $contact = $this->getUpdate()->getMessage()->getContact()['phone_number'];
+        
+        if ($message) {            
+            $this->getTelegram()->triggerCommand('contact', $this->getUpdate());
+            return false;        
+        } 
+        if ($contact) {            
+            $this->getTelegram()->triggerCommand('select', $this->getUpdate());
+            return false;        
+        }    
         return true;
     }
 }

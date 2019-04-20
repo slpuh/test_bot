@@ -8,7 +8,7 @@ class DumbReplyAgent extends AbstractReplyAgent
     public function handle()
     {
         $this->replyWithMessage([
-            "text" => "Я робот и не в состоянии понять смысл Вашего сообщения." . PHP_EOL .
+            "text" => "Я не понимаю Ваше сообщения." . PHP_EOL .
                 "Пожалуйста, используйте меню для взаимодействия со мной :)",
         ]);
         return false;

@@ -35,8 +35,8 @@ return [
         'mybot' => [
             'username'            => 'TelegramBot',
             'token'               => env('TELEGRAM_BOT_TOKEN', '803222815:AAECywynRhyfRrKoO03Racx5QW0pICQ6D-Y'),
-            'certificate_path'    => env('TELEGRAM_CERTIFICATE_PATH', 'https://382ad285.ngrok.io'),
-            'webhook_url'         => env('TELEGRAM_WEBHOOK_URL', '/bot803222815:AAECywynRhyfRrKoO03Racx5QW0pICQ6D-Y/setWebhook'),
+            'certificate_path'    => env('TELEGRAM_CERTIFICATE_PATH', 'YOUR_TELEGRAM_CERTIFICATE_PATH'),
+            'webhook_url'         => env('TELEGRAM_WEBHOOK_URL', 'YOUR_TELEGRAM_WEBHOOK_URL'),
             'commands'            => [
                 //Acme\Project\Commands\MyTelegramBot\BotCommand::class
             ],
@@ -117,23 +117,20 @@ return [
     */
     'commands'                     => [
         Telegram\Bot\Commands\HelpCommand::class,
-        \App\Telegram\Commands\StartCommand::class,
-        \App\Telegram\Commands\ListInlineCommand::class,
-        \App\Telegram\Commands\MyCommand::class,
-        \App\Telegram\Commands\AboutCommand::class,
-        \App\Telegram\Commands\TestCommand::class,
+        \App\Telegram\Commands\StartCommand::class,        
+        \App\Telegram\Commands\SelectCommand::class,       
+        \App\Telegram\Commands\ContactCommand::class,       
     ],
 
     'callbackCommands' => [
-        \App\Telegram\CallbackCommands\CourseCallbackCommand::class,
-        \App\Telegram\CallbackCommands\MyInfoCallbackCommand::class,
-        \App\Telegram\CallbackCommands\SetMyCallbackCommand::class,
+        \App\Telegram\CallbackCommands\OneCallbackCommand::class,
+        \App\Telegram\CallbackCommands\TwoCallbackCommand::class,
+        \App\Telegram\CallbackCommands\ThreeCallbackCommand::class,
     ],
 
     'replyAgents' => [
         \App\Telegram\ReplyAgents\MenuReplyAgent::class,
-        \App\Telegram\ReplyAgents\DumbReplyAgent::class,
-        \App\Telegram\ReplyAgents\SetMyReplyAgent::class,
+        \App\Telegram\ReplyAgents\DumbReplyAgent::class,        
     ],
 
     /*
