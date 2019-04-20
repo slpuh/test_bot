@@ -34,7 +34,7 @@ return [
     'bots'                         => [
         'mybot' => [
             'username'            => 'TelegramBot',
-            'token'               => env('TELEGRAM_BOT_TOKEN', '803222815:AAECywynRhyfRrKoO03Racx5QW0pICQ6D-Y'),
+            'token'               => env('TELEGRAM_BOT_TOKEN', 'YOUR_TELEGRAM_BOT_TOKEN'),
             'certificate_path'    => env('TELEGRAM_CERTIFICATE_PATH', 'YOUR_TELEGRAM_CERTIFICATE_PATH'),
             'webhook_url'         => env('TELEGRAM_WEBHOOK_URL', 'YOUR_TELEGRAM_WEBHOOK_URL'),
             'commands'            => [
