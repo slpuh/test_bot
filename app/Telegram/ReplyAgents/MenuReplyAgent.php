@@ -7,7 +7,8 @@ class MenuReplyAgent extends AbstractReplyAgent
 
     public function handle()
     {
-        $message = $this->getUpdate()->getMessage()->getText(); 
+        $message = $this->getUpdate()->getMessage()->getText();  
+              
         
         $contact = $this->getUpdate()->getMessage()->getContact()['phone_number'];
         

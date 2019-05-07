@@ -58,9 +58,8 @@ abstract class CallbackCommand
 
     public function getCallbackData()
     {
-        //$data = $this->getName() . ':' . implode(",", $this->getParameters());
-        $data = $this->getName();
-        
+        $data = $this->getName() . ':' . implode(",", [1,2]);
+        //$data = $this->getName();
         if (strlen($data) > 64) {
             throw new \InvalidArgumentException("Callback data is larger than 64 bytes");
         }
@@ -130,11 +129,7 @@ abstract class CallbackCommand
         );
 
         $this->getTelegram()->answerCallbackQuery($params);
-    }
-
-    abstract public function getParameters();
-
-    abstract public function setParameters($params);
+    }    
 
     abstract public function handle();
 }

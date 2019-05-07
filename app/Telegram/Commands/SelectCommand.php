@@ -22,13 +22,14 @@ class SelectCommand extends Command
         $keyboard = Keyboard::make()->inline();
 
         $command = app(OneCallbackCommand::class);
-        //file_put_contents('log.txt', print_r($command, true));
+        
         $button1 = Keyboard::inlineButton([
             'text' => 'Один',
             'callback_data' => $command->getCallbackData(),
         ]);        
-         
+        
         $command = app(TwoCallbackCommand::class);
+        
         $button2 = Keyboard::inlineButton([
             'text' => 'Два',
             'callback_data' => $command->getCallbackData(),
@@ -41,10 +42,11 @@ class SelectCommand extends Command
         ]);
         
         $keyboard->row($button1, $button2, $button3);        
-
+        
         $this->replyWithMessage([
             'text' => 'Отлично! А теперь выбери к какой категории пользователей тебя отнести',
             'reply_markup' => $keyboard,
-        ]);        
+        ]); 
+              
     }
 }

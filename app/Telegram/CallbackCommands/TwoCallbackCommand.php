@@ -4,22 +4,12 @@ namespace App\Telegram\CallbackCommands;
 
 class TwoCallbackCommand extends CallbackCommand
 {
-    protected $name = 'two';  
-    
-    public function getParameters() 
-    {
-
-    }
-
-    public function setParameters($params)
-    {
-
-    }
+    protected $name = 'two';    
 
     public function handle()
     {
-        //$this->answerCallbackQuery();
-        //$this->editMessageText(['text' => 'Нет данных']);
+        $message = 'Поздравляю! Вы выбрали категорию ' . ucfirst($this->name) . ' теперь пришли мне фото';      
+        $this->editMessageText(['text' => $message]);
        
     }
 }

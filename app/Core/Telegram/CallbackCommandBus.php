@@ -74,27 +74,21 @@ class CallbackCommandBus
     {
         if (preg_match('~^([a-z]+):(.*)~is', $data, $matches)) {
             $callbackCommandName = $matches[1];
-             
-            $paramsRaw = $matches[2];
-            $params = explode(",", $paramsRaw);
             
             if (isset($this->commands[$callbackCommandName])) {
                 $this->execute(
                     get_class($this->commands[$callbackCommandName]),
-                    $update,
-                    $params
+                    $update            
                 );
             }
         }
     }
 
-    protected function execute($commandClass, $update, $parameters)
+    protected function execute($commandClass, $update)
     {
         /** @var CallbackCommand $command */
         $command = app()->make($commandClass, [$this->telegram]);
-        
-        $command->setUpdate($update)
-            ->setParameters($parameters);
+        $command->setUpdate($update);
 
         $command->handle();
     }

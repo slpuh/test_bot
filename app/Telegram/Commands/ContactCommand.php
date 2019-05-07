@@ -25,8 +25,7 @@ class ContactCommand extends Command
         ]);
         
         $keyboard->row($button);         
-        //file_put_contents('log.txt', print_r($this->getUpdate()->getMessage()->getFrom()->getId(), true));
-        
+                
         $this->replyWithMessage([            
             'text' => 'Для начала использования отправь мне свой контакт',
             'reply_markup' => $keyboard,                         
